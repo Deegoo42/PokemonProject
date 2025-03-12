@@ -1,0 +1,70 @@
+body { text-align: center; font-family: Arial, sans-serif; }
+#pokemonImage, #enemyImage {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    transition: transform 0.2s ease-in-out;
+}
+#hpBarContainer, #enemyHpBarContainer {
+    width: 200px;
+    height: 20px;
+    border: 2px solid black;
+    background: lightgray;
+    margin: auto;
+}
+#hpBar, #enemyHpBar {
+    height: 100%;
+    background: red;
+    width: 100%;
+}
+#hpText, #enemyHpText { font-weight: bold; }
+#caughtPokemons {
+    margin-top: 20px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 0;
+    list-style-type: none;
+}
+.shake {
+    animation: shake 0.2s ease-in-out;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
+@keyframes flashRed {
+  0% { filter: none;}
+  50% { filter: brightness(0.6) sepia(1) saturate(1000%) hue-rotate(0deg);}
+  100% { filter: none;}
+}
+.flashRed {
+  animation: flashRed 1s ease-in-out;
+}
+
+@keyframes jumpToEnemy {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-50px); }
+  100% { transform: translateY(0); }
+}
+.jumpToEnemy {
+  animation: jumpToEnemy 1s ease-in-out;
+}
+#starterChoice {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+#starterChoice button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 18px;
+}
+#gameControls {
+    display: none; /* Hide de controls totdat je je starter hebt gekozen */
+}
+#pokemonImage.flipped {
+    transform: scaleX(-1) /* Draait de image van JOUW pokemon om */
+}
