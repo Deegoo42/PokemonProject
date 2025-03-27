@@ -1,7 +1,6 @@
 <?php
 session_start();
 if (!isset($_SESSION['username'])) {
-    // Redirect to login if not logged in
     header("Location: login.php");
     exit();
 }
@@ -218,27 +217,15 @@ $conn->close();
         showGen(1); // Of een andere manier om je functie aan te roepen
     });
 
-    function chooseStarter(starter) {
-        // Send the selected starter to the server
-        fetch('save_starter.php', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ starter: starter }),
-        })
-        .then(response => response.json())
-        .then(data => {
-            if (data.success) {
-                alert("Starter Pokémon saved successfully!");
-                window.location.href = "game.php"; // Redirect to the game page
-            } else {
-                alert("Error saving starter Pokémon: " + data.message);
-            }
-        })
-        .catch(error => {
-            console.error("Error:", error);
-        });
+    function chooseStarter(pokemon) {
+        // Save the chosen starter in localStorage
+        localStorage.setItem("chosenStarter", pokemon);
+
+        // Debugging: Log the chosen starter
+        console.log(`Chosen starter saved to localStorage: ${pokemon}`);
+
+        // Redirect to game.php
+        window.location.href = "game.php";
     }
 </script>
 </body>

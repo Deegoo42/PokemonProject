@@ -26,7 +26,10 @@ if ($row = $result->fetch_assoc()) {
 $stmt->close();
 $conn->close();
 
-echo "<script>console.log('Starter: " . $starter . "');</script>";
+// If no starter is found, set a default starter (e.g., Bulbasaur)
+if (empty($starter)) {
+    $starter = "Bulbasaur";
+}
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pokemon_name'])) {
     if (!isset($_SESSION['username'])) {
@@ -56,6 +59,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pokemon_name'])) {
     $stmt->close();
     $conn->close();
 }
+echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_QUOTES, 'UTF-8') . "');</script>";
 ?>
 
 <!DOCTYPE html>
@@ -219,12 +223,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pokemon_name'])) {
         let chosenStarter = "<?php echo htmlspecialchars($starter); ?>";
         console.log("Chosen Starter:", chosenStarter);
 
-        if (chosenStarter) {
-            const starterId = getPokemonId(chosenStarter);
-            document.getElementById("pokemonImage").src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${starterId}.png`;
-            document.getElementById("pokemonName").textContent = chosenStarter;
-            document.getElementById("pokemonContainer").style.display = 'block';
-        }
+        const starterId = getPokemonId(chosenStarter);
+        document.getElementById("pokemonImage").src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${starterId}.png`;
+        document.getElementById("pokemonName").textContent = chosenStarter;
+        document.getElementById("pokemonContainer").style.display = 'block';
 
         // Spawn a new enemy Pokémon
         spawnEnemyPokemon();
@@ -356,6 +358,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pokemon_name'])) {
             // Failed catch
             alert("The Pokémon escaped!");
         }
+    }
+
+    let starter = localStorage.getItem("chosenStarter");
+
+    if (starter) {
+        console.log(`Starter found: ${starter}`);
+        if (evolutionStages[starter]) {
+            getPokemonData(evolutionStages[starter][0]); // Get the first evolution stage
+        } else {
+            console.error(`Starter "${starter}" not found in evolutionStages.`);
+        }
+    } else {
+        console.log("No starter found. Loading fallback Pokémon (Bulbasaur).");
+        getPokemonData(1); // Default to Bulbasaur (ID: 1)
     }
     </script>
 </body>

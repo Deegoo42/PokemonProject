@@ -1,45 +1,40 @@
 <?php
-// Database connection
-$servername = "localhost";
-$username = "root"; // Replace with your MySQL username
-$password = ""; // Replace with your MySQL password
-$dbname = "pokemon_project"; // Database name
+session_start();
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $username = $_POST['username'];
+    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Get form data
-$user = $_POST['username'];
-$pass = password_hash($_POST['password'], PASSWORD_DEFAULT); // Hash the password for security
-
-// Check if username already exists
-$sql = "SELECT * FROM users WHERE username = ?";
-$stmt = $conn->prepare($sql);
-$stmt->bind_param("s", $user);
-$stmt->execute();
-$result = $stmt->get_result();
-
-if ($result->num_rows > 0) {
-    echo "Username already exists. Please choose a different username.";
-} else {
-    // Insert new user into the database
-    $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $user, $pass);
-
-    if ($stmt->execute()) {
-        // Redirect to login.php after successful registration
-        header("Location: login.php");
-        exit(); // Ensure no further code is executed
-    } else {
-        echo "Error: " . $stmt->error;
+    // Database connection
+    $conn = new mysqli("localhost", "root", "", "pokemon_project");
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
     }
-}
 
-$stmt->close();
-$conn->close();
+    // Check if the username already exists
+    $sql = "SELECT * FROM users WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("s", $username);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        echo "Username already exists.";
+    } else {
+        // Insert the new user with a NULL starter
+        $sql = "INSERT INTO users (username, password, starter) VALUES (?, ?, NULL)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ss", $username, $password);
+
+        if ($stmt->execute()) {
+            $_SESSION['username'] = $username;
+            header("Location: index.php");
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+    }
+
+    $stmt->close();
+    $conn->close();
+}
 ?>

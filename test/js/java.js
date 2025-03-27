@@ -1,24 +1,23 @@
-
 // Haal de gegevens van de gekozen Pokémon op
 async function getPokemonData(id) {
-    let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
-    let data = await response.json();
+    try {
+        let response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+        if (!response.ok) {
+            throw new Error("Failed to fetch Pokémon data.");
+        }
 
-    // Start de game
-    currentPokemon = data;
-    document.getElementById("pokemonImage").src = data.sprites.front_default;
-    document.getElementById("pokemonImage").alt = data.name;
-    document.getElementById("pokemonName").innerText = data.name;
-    document.getElementById("pokemonImage").classList.add('flipped');
+        let data = await response.json();
 
-    maxHP = Math.floor(Math.random() * 100) + 50;
-    currentHP = maxHP;
-    updateHPBar();
+        // Set the current Pokémon
+        document.getElementById("pokemonImage").src = data.sprites.front_default;
+        document.getElementById("pokemonImage").alt = data.name;
+        document.getElementById("pokemonName").innerText = data.name;
 
-    // Spawn een vijand
-    getEnemyPokemon();
+        console.log(`Loaded Pokémon: ${data.name}`);
+    } catch (error) {
+        console.error("Error loading Pokémon data:", error);
+    }
 }
-
 // Haal de gegevens van de vijandelijke Pokémon op
 async function getEnemyPokemon() {
     let id = Math.floor(Math.random() * 1025) + 1;
@@ -155,11 +154,14 @@ function showGen(gen) {
 
 window.onload = function() {
     let starter = localStorage.getItem("chosenStarter");
+
     if (starter) {
-        getPokemonData(starter.toLowerCase());
+        // Load the chosen starter Pokémon
+        getPokemonData(evolutionStages[starter.toLowerCase()][0]);
     } else {
-        alert("Kies eerst een starter!");
-        window.location.href = "index.php";
+        // If no starter is found, provide a default Pokémon or allow the game to proceed
+        alert("Geen starter gevonden. Een standaard Pokémon wordt geladen.");
+        getPokemonData(1); // Default to Bulbasaur (ID: 1)
     }
 };
 
@@ -172,33 +174,33 @@ let enemyMaxHP = 0;
 let battlesFought = 0;
 
 const evolutionStages = {
-    "bulbasaur": [1, 2, 3],
-    "charmander": [4, 5, 6],
-    "squirtle": [7, 8, 9],
-    "chikorita": [152, 153, 154],
-    "cyndaquil": [155, 156, 157],
-    "totodile": [158, 159, 160],
-    "treecko": [252, 253, 254],
-    "torchic": [255, 256, 257],
-    "mudkip": [258, 259, 260],
-    "turtwig": [387, 388, 389],
-    "chimchar": [390, 391, 392],
-    "piplup": [393, 394, 395],
-    "snivy": [495, 496, 497],
-    "tepig": [498, 499, 500],
-    "oshawott": [501, 502, 503],
-    "chespin": [650, 651, 652],
-    "fennekin": [653, 654, 655],
-    "froakie": [656, 657, 658],
-    "rowlet": [722, 723, 724],
-    "litten": [725, 726, 727],
-    "popplio": [728, 729, 730],
-    "grookey": [810, 811, 812],
-    "scorbunny": [813, 814, 815],
-    "sobble": [816, 817, 818],
-    "sprigatito": [906, 907, 908],
-    "fuecoco": [909, 910, 911],
-    "quaxly": [912, 913, 914]
+    "Bulbasaur": [1, 2, 3],
+    "Charmander": [4, 5, 6],
+    "Squirtle": [7, 8, 9],
+    "Chikorita": [152, 153, 154],
+    "Cyndaquil": [155, 156, 157],
+    "Totodile": [158, 159, 160],
+    "Treecko": [252, 253, 254],
+    "Torchic": [255, 256, 257],
+    "Mudkip": [258, 259, 260],
+    "Turtwig": [387, 388, 389],
+    "Chimchar": [390, 391, 392],
+    "Piplup": [393, 394, 395],
+    "Snivy": [495, 496, 497],
+    "Tepig": [498, 499, 500],
+    "Oshawott": [501, 502, 503],
+    "Chespin": [650, 651, 652],
+    "Fennekin": [653, 654, 655],
+    "Froakie": [656, 657, 658],
+    "Rowlet": [722, 723, 724],
+    "Litten": [725, 726, 727],
+    "Popplio": [728, 729, 730],
+    "Grookey": [810, 811, 812],
+    "Scorbunny": [813, 814, 815],
+    "Sobble": [816, 817, 818],
+    "Sprigatito": [906, 907, 908],
+    "Fuecoco": [909, 910, 911],
+    "Quaxly": [912, 913, 914]
 };
 
 async function getPokemonData(id) {
@@ -307,12 +309,22 @@ function catchPokemon() {
     }
 }
 
-window.onload = function() {
+function logout() {
+    localStorage.removeItem("chosenStarter");
+    window.location.href = "login.php";
+}
+window.onload = function () {
     let starter = localStorage.getItem("chosenStarter");
+
     if (starter) {
-        getPokemonData(evolutionStages[starter.toLowerCase()][0]);
+        console.log(`Starter found: ${starter}`);
+        if (evolutionStages[starter]) {
+            getPokemonData(evolutionStages[starter][0]); // Get the first evolution stage
+        } else {
+            console.error(`Starter "${starter}" not found in evolutionStages.`);
+        }
     } else {
-        alert("Kies eerst een starter!");
-        window.location.href = "index.php";
+        console.log("No starter found. Loading fallback Pokémon (Bulbasaur).");
+        getPokemonData(1); // Default to Bulbasaur (ID: 1)
     }
 };

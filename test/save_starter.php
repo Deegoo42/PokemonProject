@@ -27,7 +27,7 @@ $stmt = $conn->prepare($sql);
 $stmt->bind_param("ss", $starter, $username);
 
 if ($stmt->execute()) {
-    echo json_encode(['success' => true]);
+    echo json_encode(['success' => true, 'message' => 'Starter saved successfully.']);
 } else {
     echo json_encode(['success' => false, 'message' => 'Error saving starter: ' . $stmt->error]);
 }
