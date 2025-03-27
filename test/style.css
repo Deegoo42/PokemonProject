@@ -52,19 +52,4 @@ body { text-align: center; font-family: Arial, sans-serif; }
 .jumpToEnemy {
   animation: jumpToEnemy 1s ease-in-out;
 }
-#starterChoice {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-#starterChoice button {
-    margin: 10px;
-    padding: 10px;
-    font-size: 18px;
-}
-#gameControls {
-    display: none; /* Hide de controls totdat je je starter hebt gekozen */
-}
-#pokemonImage.flipped {
-    transform: scaleX(-1) /* Draait de image van JOUW pokemon om */
-}
+

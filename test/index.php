@@ -1,9 +1,42 @@
+<?php
+session_start();
+if (!isset($_SESSION['username'])) {
+    // Redirect to login if not logged in
+    header("Location: login.php");
+    exit();
+}
+
+// Check if the user already has a starter Pokémon
+$conn = new mysqli("localhost", "root", "", "pokemon_project");
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$username = $_SESSION['username'];
+$sql = "SELECT starter FROM users WHERE username = ?";
+$stmt = $conn->prepare($sql);
+$stmt->bind_param("s", $username);
+$stmt->execute();
+$result = $stmt->get_result();
+
+if ($row = $result->fetch_assoc()) {
+    if (!empty($row['starter'])) {
+        // Redirect to game.php if the user already has a starter
+        header("Location: game.php");
+        exit();
+    }
+}
+
+$stmt->close();
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The PokÃ©mon Game</title>
+    <title>Choose Your Starter</title>
     <style> 
         * {
             box-sizing: border-box;
@@ -147,7 +180,7 @@
 
     </style>
 </head>
-<img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/2fb2821a-1406-4a1d-9b04-6668f278e944/d843okx-eb13e8e4-0fa4-4fa9-968a-e0f36ff168de.png/v1/fit/w_800,h_480,q_70,strp/pokemon_x_and_y_battle_background_11_by_phoenixoflight92_d843okx-414w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NDgwIiwicGF0aCI6IlwvZlwvMmZiMjgyMWEtMTQwNi00YTFkLTliMDQtNjY2OGYyNzhlOTQ0XC9kODQzb2t4LWViMTNlOGU0LTBmYTQtNGZhOS05NjhhLWUwZjM2ZmYxNjhkZS5wbmciLCJ3aWR0aCI6Ijw9ODAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.m5eG5d4O5_xTOZAmNu5BcPF8rs01F7Pp4y2g2R14kOE" id="background" alt="achtergrond">
+<img src="https://pbs.twimg.com/media/FosWlLqXsAAYkIt.jpg:large" id="background" alt="achtergrond">
 
 <img id="ds_yes" src="images/starter.png" alt="Afbeelding">
 
@@ -155,16 +188,16 @@
 
     <div id="starterChoice">
         <div class="starter">
-            <img id="starter1" src="" onclick="starter1">
-            <p id="name1"></p>
+            <img id="starter1" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/1.png" onclick="chooseStarter('Bulbasaur')" alt="Bulbasaur">
+            <p id="name1">Bulbasaur</p>
         </div>
         <div class="starter">
-            <img id="starter2" src="" onclick="starter2">
-            <p id="name2"></p>
+            <img id="starter2" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/4.png" onclick="chooseStarter('Charmander')" alt="Charmander">
+            <p id="name2">Charmander</p>
         </div>
         <div class="starter">
-            <img id="starter3" src="" onclick="starter3">
-            <p id="name3"></p>
+            <img id="starter3" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/7.png" onclick="chooseStarter('Squirtle')" alt="Squirtle">
+            <p id="name3">Squirtle</p>
         </div>
     </div>
 
@@ -180,5 +213,33 @@
         <button class="btn" onclick="showGen(9)">Gen 9</button>
     </div>
     <script src="js\java.js"></script>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        showGen(1); // Of een andere manier om je functie aan te roepen
+    });
+
+    function chooseStarter(starter) {
+        // Send the selected starter to the server
+        fetch('save_starter.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ starter: starter }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.success) {
+                alert("Starter Pokémon saved successfully!");
+                window.location.href = "game.php"; // Redirect to the game page
+            } else {
+                alert("Error saving starter Pokémon: " + data.message);
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        });
+    }
+</script>
 </body>
 </html>
