@@ -1,0 +1,464 @@
+[28-Mar-2025 00:35:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:10 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:36 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:35:48 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:25
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(25): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 25
+[28-Mar-2025 00:36:39 UTC] Username: Kyra
+[28-Mar-2025 00:36:39 UTC] Database connection successful.
+[28-Mar-2025 00:36:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:36:39 UTC] Username: Kyra
+[28-Mar-2025 00:36:39 UTC] Database connection successful.
+[28-Mar-2025 00:36:39 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:36:51 UTC] Username: Kyra
+[28-Mar-2025 00:36:51 UTC] Database connection successful.
+[28-Mar-2025 00:36:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:36:51 UTC] Username: Kyra
+[28-Mar-2025 00:36:51 UTC] Database connection successful.
+[28-Mar-2025 00:36:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:37:01 UTC] Username: Kyra
+[28-Mar-2025 00:37:01 UTC] Database connection successful.
+[28-Mar-2025 00:37:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:37:01 UTC] Username: Kyra
+[28-Mar-2025 00:37:01 UTC] Database connection successful.
+[28-Mar-2025 00:37:01 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:37:26 UTC] Username: Kyra
+[28-Mar-2025 00:37:27 UTC] Database connection successful.
+[28-Mar-2025 00:37:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:37:27 UTC] Username: Kyra
+[28-Mar-2025 00:37:27 UTC] Database connection successful.
+[28-Mar-2025 00:37:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:39:14 UTC] Username: Kyra
+[28-Mar-2025 00:39:14 UTC] Database connection successful.
+[28-Mar-2025 00:39:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:39:14 UTC] Username: Kyra
+[28-Mar-2025 00:39:14 UTC] Database connection successful.
+[28-Mar-2025 00:39:14 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:51 UTC] Username: laval1
+[28-Mar-2025 00:41:51 UTC] Database connection successful.
+[28-Mar-2025 00:41:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:51 UTC] Username: laval1
+[28-Mar-2025 00:41:51 UTC] Database connection successful.
+[28-Mar-2025 00:41:51 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:53 UTC] Username: laval1
+[28-Mar-2025 00:41:53 UTC] Database connection successful.
+[28-Mar-2025 00:41:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:53 UTC] Username: laval1
+[28-Mar-2025 00:41:53 UTC] Database connection successful.
+[28-Mar-2025 00:41:53 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:54 UTC] Username: laval1
+[28-Mar-2025 00:41:54 UTC] Database connection successful.
+[28-Mar-2025 00:41:54 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:54 UTC] Username: laval1
+[28-Mar-2025 00:41:55 UTC] Database connection successful.
+[28-Mar-2025 00:41:55 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:57 UTC] Username: laval1
+[28-Mar-2025 00:41:57 UTC] Database connection successful.
+[28-Mar-2025 00:41:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:41:57 UTC] Username: laval1
+[28-Mar-2025 00:41:57 UTC] Database connection successful.
+[28-Mar-2025 00:41:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:04 UTC] Username: Kyra
+[28-Mar-2025 00:42:04 UTC] Database connection successful.
+[28-Mar-2025 00:42:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:04 UTC] Username: Kyra
+[28-Mar-2025 00:42:04 UTC] Database connection successful.
+[28-Mar-2025 00:42:04 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:09 UTC] Username: Kyra
+[28-Mar-2025 00:42:09 UTC] Database connection successful.
+[28-Mar-2025 00:42:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:09 UTC] Username: Kyra
+[28-Mar-2025 00:42:09 UTC] Database connection successful.
+[28-Mar-2025 00:42:09 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:59 UTC] Username: Kyra
+[28-Mar-2025 00:42:59 UTC] Database connection successful.
+[28-Mar-2025 00:42:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:42:59 UTC] Username: Kyra
+[28-Mar-2025 00:42:59 UTC] Database connection successful.
+[28-Mar-2025 00:42:59 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'pokemon_id' in 'field list' in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php:33
+Stack trace:
+#0 C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php(33): mysqli->prepare('SELECT pokemon_...')
+#1 {main}
+  thrown in C:\Users\steph\Documents\GitHub\PokemonProject\test\get_caught_pokemon.php on line 33
+[28-Mar-2025 00:46:07 UTC] Username: Kyra
+[28-Mar-2025 00:46:07 UTC] Database connection successful.
+[28-Mar-2025 00:46:07 UTC] Caught Pokémon IDs: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+[28-Mar-2025 00:46:07 UTC] Username: Kyra
+[28-Mar-2025 00:46:07 UTC] Database connection successful.
+[28-Mar-2025 00:46:07 UTC] Caught Pokémon IDs: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+[28-Mar-2025 00:46:11 UTC] Username: Kyra
+[28-Mar-2025 00:46:11 UTC] Database connection successful.
+[28-Mar-2025 00:46:11 UTC] Caught Pokémon IDs: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+[28-Mar-2025 00:46:11 UTC] Username: Kyra
+[28-Mar-2025 00:46:11 UTC] Database connection successful.
+[28-Mar-2025 00:46:11 UTC] Caught Pokémon IDs: [null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null]
+[28-Mar-2025 00:46:37 UTC] Username: Kyra
+[28-Mar-2025 00:46:37 UTC] Database connection successful.
+[28-Mar-2025 00:46:37 UTC] Caught Pokémon IDs: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[28-Mar-2025 00:46:37 UTC] Username: Kyra
+[28-Mar-2025 00:46:37 UTC] Database connection successful.
+[28-Mar-2025 00:46:37 UTC] Caught Pokémon IDs: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+[28-Mar-2025 00:48:06 UTC] Username: Kyra
+[28-Mar-2025 00:48:06 UTC] Database connection successful.
+[28-Mar-2025 00:48:06 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:06 UTC] Username: Kyra
+[28-Mar-2025 00:48:06 UTC] Database connection successful.
+[28-Mar-2025 00:48:06 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:08 UTC] Username: Kyra
+[28-Mar-2025 00:48:08 UTC] Database connection successful.
+[28-Mar-2025 00:48:08 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:08 UTC] Username: Kyra
+[28-Mar-2025 00:48:08 UTC] Database connection successful.
+[28-Mar-2025 00:48:08 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:12 UTC] Username: Kyra
+[28-Mar-2025 00:48:12 UTC] Database connection successful.
+[28-Mar-2025 00:48:12 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:12 UTC] Username: Kyra
+[28-Mar-2025 00:48:12 UTC] Database connection successful.
+[28-Mar-2025 00:48:12 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 00:48:24 UTC] Username: Kyra
+[28-Mar-2025 00:48:24 UTC] Database connection successful.
+[28-Mar-2025 00:48:24 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:48:24 UTC] Username: Kyra
+[28-Mar-2025 00:48:24 UTC] Database connection successful.
+[28-Mar-2025 00:48:24 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:48:37 UTC] Username: Kyra
+[28-Mar-2025 00:48:37 UTC] Database connection successful.
+[28-Mar-2025 00:48:37 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:48:37 UTC] Username: Kyra
+[28-Mar-2025 00:48:37 UTC] Database connection successful.
+[28-Mar-2025 00:48:37 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:48:42 UTC] Username: Kyra
+[28-Mar-2025 00:48:42 UTC] Database connection successful.
+[28-Mar-2025 00:48:42 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:48:42 UTC] Username: Kyra
+[28-Mar-2025 00:48:42 UTC] Database connection successful.
+[28-Mar-2025 00:48:42 UTC] Caught Pokémon IDs: [0]
+[28-Mar-2025 00:50:31 UTC] Username: Kyra
+[28-Mar-2025 00:50:31 UTC] Database connection successful.
+[28-Mar-2025 00:50:31 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:50:31 UTC] Username: Kyra
+[28-Mar-2025 00:50:31 UTC] Database connection successful.
+[28-Mar-2025 00:50:31 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:50:45 UTC] Username: Kyra
+[28-Mar-2025 00:50:45 UTC] Database connection successful.
+[28-Mar-2025 00:50:45 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:50:45 UTC] Username: Kyra
+[28-Mar-2025 00:50:45 UTC] Database connection successful.
+[28-Mar-2025 00:50:45 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:53:46 UTC] Username: Kyra
+[28-Mar-2025 00:53:46 UTC] Database connection successful.
+[28-Mar-2025 00:53:46 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:53:46 UTC] Username: Kyra
+[28-Mar-2025 00:53:46 UTC] Database connection successful.
+[28-Mar-2025 00:53:46 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:56:47 UTC] Username: Kyra
+[28-Mar-2025 00:56:47 UTC] Database connection successful.
+[28-Mar-2025 00:56:47 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:56:47 UTC] Username: Kyra
+[28-Mar-2025 00:56:47 UTC] Database connection successful.
+[28-Mar-2025 00:56:47 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:56:57 UTC] Username: Kyra
+[28-Mar-2025 00:56:57 UTC] Database connection successful.
+[28-Mar-2025 00:56:57 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:56:57 UTC] Username: Kyra
+[28-Mar-2025 00:56:57 UTC] Database connection successful.
+[28-Mar-2025 00:56:57 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:57:13 UTC] Username: Kyra
+[28-Mar-2025 00:57:13 UTC] Database connection successful.
+[28-Mar-2025 00:57:13 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 00:57:13 UTC] Username: Kyra
+[28-Mar-2025 00:57:13 UTC] Database connection successful.
+[28-Mar-2025 00:57:13 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 01:00:07 UTC] Username: Kyra
+[28-Mar-2025 01:00:07 UTC] Database connection successful.
+[28-Mar-2025 01:00:07 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 01:00:07 UTC] Username: Kyra
+[28-Mar-2025 01:00:07 UTC] Database connection successful.
+[28-Mar-2025 01:00:07 UTC] Caught Pokémon IDs: [0,0]
+[28-Mar-2025 01:00:15 UTC] Username: Kyra
+[28-Mar-2025 01:00:15 UTC] Database connection successful.
+[28-Mar-2025 01:00:15 UTC] Caught Pokémon IDs: [0,0,151]
+[28-Mar-2025 01:00:15 UTC] Username: Kyra
+[28-Mar-2025 01:00:15 UTC] Database connection successful.
+[28-Mar-2025 01:00:15 UTC] Caught Pokémon IDs: [0,0,151]
+[28-Mar-2025 01:01:53 UTC] Username: Kyra
+[28-Mar-2025 01:01:53 UTC] Database connection successful.
+[28-Mar-2025 01:01:53 UTC] Caught Pokémon IDs: [0,0,151,182]
+[28-Mar-2025 01:01:53 UTC] Username: Kyra
+[28-Mar-2025 01:01:53 UTC] Database connection successful.
+[28-Mar-2025 01:01:53 UTC] Caught Pokémon IDs: [0,0,151,182]
+[28-Mar-2025 01:02:01 UTC] Username: Kyra
+[28-Mar-2025 01:02:01 UTC] Database connection successful.
+[28-Mar-2025 01:02:01 UTC] Caught Pokémon IDs: [0,0,151,182]
+[28-Mar-2025 01:02:01 UTC] Username: Kyra
+[28-Mar-2025 01:02:01 UTC] Database connection successful.
+[28-Mar-2025 01:02:01 UTC] Caught Pokémon IDs: [0,0,151,182]
+[28-Mar-2025 01:03:15 UTC] Username: Kyra
+[28-Mar-2025 01:03:15 UTC] Database connection successful.
+[28-Mar-2025 01:03:15 UTC] Caught Pokémon IDs: [0,0,151,182,467]
+[28-Mar-2025 01:03:15 UTC] Username: Kyra
+[28-Mar-2025 01:03:15 UTC] Database connection successful.
+[28-Mar-2025 01:03:15 UTC] Caught Pokémon IDs: [0,0,151,182,467]
+[28-Mar-2025 01:03:38 UTC] Username: Kyra
+[28-Mar-2025 01:03:38 UTC] Database connection successful.
+[28-Mar-2025 01:03:38 UTC] Caught Pokémon IDs: [151,182,467]
+[28-Mar-2025 01:03:38 UTC] Username: Kyra
+[28-Mar-2025 01:03:38 UTC] Database connection successful.
+[28-Mar-2025 01:03:38 UTC] Caught Pokémon IDs: [151,182,467]
+[28-Mar-2025 01:04:10 UTC] Username: Kyra
+[28-Mar-2025 01:04:10 UTC] Database connection successful.
+[28-Mar-2025 01:04:10 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:04:10 UTC] Username: Kyra
+[28-Mar-2025 01:04:10 UTC] Database connection successful.
+[28-Mar-2025 01:04:10 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:08:13 UTC] Username: Kyra
+[28-Mar-2025 01:08:13 UTC] Database connection successful.
+[28-Mar-2025 01:08:13 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:08:13 UTC] Username: Kyra
+[28-Mar-2025 01:08:13 UTC] Database connection successful.
+[28-Mar-2025 01:08:13 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:08:55 UTC] Username: Kyra
+[28-Mar-2025 01:08:55 UTC] Database connection successful.
+[28-Mar-2025 01:08:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:08:55 UTC] Username: Kyra
+[28-Mar-2025 01:08:55 UTC] Database connection successful.
+[28-Mar-2025 01:08:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:37 UTC] Username: Kyra
+[28-Mar-2025 01:09:37 UTC] Database connection successful.
+[28-Mar-2025 01:09:37 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:37 UTC] Username: Kyra
+[28-Mar-2025 01:09:37 UTC] Database connection successful.
+[28-Mar-2025 01:09:37 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:49 UTC] Username: Kyra
+[28-Mar-2025 01:09:49 UTC] Database connection successful.
+[28-Mar-2025 01:09:49 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:49 UTC] Username: Kyra
+[28-Mar-2025 01:09:49 UTC] Database connection successful.
+[28-Mar-2025 01:09:49 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:55 UTC] Username: Kyra
+[28-Mar-2025 01:09:55 UTC] Database connection successful.
+[28-Mar-2025 01:09:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:09:55 UTC] Username: Kyra
+[28-Mar-2025 01:09:55 UTC] Database connection successful.
+[28-Mar-2025 01:09:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:10:14 UTC] Username: Kyra
+[28-Mar-2025 01:10:14 UTC] Database connection successful.
+[28-Mar-2025 01:10:14 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:10:14 UTC] Username: Kyra
+[28-Mar-2025 01:10:14 UTC] Database connection successful.
+[28-Mar-2025 01:10:14 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:12:29 UTC] Username: laval1
+[28-Mar-2025 01:12:29 UTC] Database connection successful.
+[28-Mar-2025 01:12:29 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 01:12:29 UTC] Username: laval1
+[28-Mar-2025 01:12:29 UTC] Database connection successful.
+[28-Mar-2025 01:12:29 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 01:12:37 UTC] Username: laval1
+[28-Mar-2025 01:12:37 UTC] Database connection successful.
+[28-Mar-2025 01:12:37 UTC] Caught Pokémon IDs: [853]
+[28-Mar-2025 01:12:37 UTC] Username: laval1
+[28-Mar-2025 01:12:37 UTC] Database connection successful.
+[28-Mar-2025 01:12:37 UTC] Caught Pokémon IDs: [853]
+[28-Mar-2025 01:12:57 UTC] Username: laval1
+[28-Mar-2025 01:12:57 UTC] Database connection successful.
+[28-Mar-2025 01:12:57 UTC] Caught Pokémon IDs: [853,760]
+[28-Mar-2025 01:12:57 UTC] Username: laval1
+[28-Mar-2025 01:12:57 UTC] Database connection successful.
+[28-Mar-2025 01:12:57 UTC] Caught Pokémon IDs: [853,760]
+[28-Mar-2025 01:19:55 UTC] Username: Kyra
+[28-Mar-2025 01:19:55 UTC] Database connection successful.
+[28-Mar-2025 01:19:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 01:19:55 UTC] Username: Kyra
+[28-Mar-2025 01:19:55 UTC] Database connection successful.
+[28-Mar-2025 01:19:55 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 02:17:01 UTC] Username: Rexy
+[28-Mar-2025 02:17:01 UTC] Database connection successful.
+[28-Mar-2025 02:17:01 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 02:17:01 UTC] Username: Rexy
+[28-Mar-2025 02:17:01 UTC] Database connection successful.
+[28-Mar-2025 02:17:01 UTC] Caught Pokémon IDs: []
+[28-Mar-2025 02:17:20 UTC] Username: Rexy
+[28-Mar-2025 02:17:20 UTC] Database connection successful.
+[28-Mar-2025 02:17:20 UTC] Caught Pokémon IDs: [262]
+[28-Mar-2025 02:17:20 UTC] Username: Rexy
+[28-Mar-2025 02:17:20 UTC] Database connection successful.
+[28-Mar-2025 02:17:20 UTC] Caught Pokémon IDs: [262]
+[28-Mar-2025 02:17:42 UTC] Username: Kyra
+[28-Mar-2025 02:17:42 UTC] Database connection successful.
+[28-Mar-2025 02:17:42 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 02:17:42 UTC] Username: Kyra
+[28-Mar-2025 02:17:42 UTC] Database connection successful.
+[28-Mar-2025 02:17:42 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 02:17:45 UTC] Username: Kyra
+[28-Mar-2025 02:17:45 UTC] Database connection successful.
+[28-Mar-2025 02:17:45 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 02:17:45 UTC] Username: Kyra
+[28-Mar-2025 02:17:45 UTC] Database connection successful.
+[28-Mar-2025 02:17:45 UTC] Caught Pokémon IDs: [151,182,467,578]
+[28-Mar-2025 02:19:49 UTC] Username: laval1
+[28-Mar-2025 02:19:49 UTC] Database connection successful.
+[28-Mar-2025 02:19:49 UTC] Caught Pokémon IDs: [853,760,234]
+[28-Mar-2025 02:19:49 UTC] Username: laval1
+[28-Mar-2025 02:19:49 UTC] Database connection successful.
+[28-Mar-2025 02:19:49 UTC] Caught Pokémon IDs: [853,760,234]
+[28-Mar-2025 02:19:52 UTC] Username: laval1
+[28-Mar-2025 02:19:52 UTC] Database connection successful.
+[28-Mar-2025 02:19:52 UTC] Caught Pokémon IDs: [853,760,234]
+[28-Mar-2025 02:19:52 UTC] Username: laval1
+[28-Mar-2025 02:19:52 UTC] Database connection successful.
+[28-Mar-2025 02:19:52 UTC] Caught Pokémon IDs: [853,760,234]
+[28-Mar-2025 02:20:24 UTC] Username: laval1
+[28-Mar-2025 02:20:24 UTC] Database connection successful.
+[28-Mar-2025 02:20:24 UTC] Caught Pokémon IDs: [853,760,234,471]
+[28-Mar-2025 02:20:24 UTC] Username: laval1
+[28-Mar-2025 02:20:24 UTC] Database connection successful.
+[28-Mar-2025 02:20:24 UTC] Caught Pokémon IDs: [853,760,234,471]
+[28-Mar-2025 02:20:29 UTC] Username: laval1
+[28-Mar-2025 02:20:29 UTC] Database connection successful.
+[28-Mar-2025 02:20:29 UTC] Caught Pokémon IDs: [853,760,234,471]
+[28-Mar-2025 02:20:29 UTC] Username: laval1
+[28-Mar-2025 02:20:29 UTC] Database connection successful.
+[28-Mar-2025 02:20:29 UTC] Caught Pokémon IDs: [853,760,234,471]
+[28-Mar-2025 02:24:48 UTC] Username: laval1
+[28-Mar-2025 02:24:48 UTC] Database connection successful.
+[28-Mar-2025 02:24:48 UTC] Caught Pokémon IDs: [853,760,234,471]
+[28-Mar-2025 02:24:48 UTC] Username: laval1
+[28-Mar-2025 02:24:48 UTC] Database connection successful.
+[28-Mar-2025 02:24:48 UTC] Caught Pokémon IDs: [853,760,234,471]

@@ -53,3 +53,29 @@ body { text-align: center; font-family: Arial, sans-serif; }
   animation: jumpToEnemy 1s ease-in-out;
 }
 
+#actions {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom of the screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  display: flex;
+  gap: 20px; /* Space between the buttons */
+  justify-content: center;
+  align-items: center;
+}
+
+#actions img {
+  cursor: pointer;
+  width: 150px;
+  height: auto;
+}
+
+#title {
+  text-align: center;
+  margin-top: 20px; /* Adjust spacing from the top */
+}
+
+#title img {
+  width: 300px; /* Adjust the width of the title image */
+  height: auto; /* Maintain aspect ratio */
+}

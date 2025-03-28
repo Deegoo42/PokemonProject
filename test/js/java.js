@@ -126,8 +126,21 @@ function updateEnemyHPBar() {
 }
 
 function chooseStarter(pokemon) {
-    localStorage.setItem("chosenStarter", pokemon);
-    window.location.href = "game.php";
+    // Create a form dynamically
+    const form = document.createElement("form");
+    form.method = "POST";
+    form.action = "index.php";
+
+    // Add the starter as a hidden input
+    const input = document.createElement("input");
+    input.type = "hidden";
+    input.name = "starter";
+    input.value = pokemon;
+    form.appendChild(input);
+
+    // Append the form to the body and submit it
+    document.body.appendChild(form);
+    form.submit();
 }
 
 const starters = {
@@ -314,17 +327,39 @@ function logout() {
     window.location.href = "login.php";
 }
 window.onload = function () {
-    let starter = localStorage.getItem("chosenStarter");
+    console.log("Starter Pokémon is being handled by PHP.");
+};
 
-    if (starter) {
-        console.log(`Starter found: ${starter}`);
-        if (evolutionStages[starter]) {
-            getPokemonData(evolutionStages[starter][0]); // Get the first evolution stage
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Chosen Starter from PHP:", chosenStarter);
+
+    if (!chosenStarter) {
+        console.error("No starter Pokémon found. Please check the PHP logic.");
+        return;
+    }
+
+    if (chosenStarter) {
+        const starterId = getPokemonId(chosenStarter);
+        if (starterId) {
+            document.getElementById("pokemonImage").src = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${starterId}.png`;
+            document.getElementById("pokemonName").textContent = chosenStarter;
+            document.getElementById("pokemonContainer").style.display = 'block';
+
+            // Spawn a new enemy Pokémon
+            spawnEnemyPokemon();
+            updateHpBars();
         } else {
-            console.error(`Starter "${starter}" not found in evolutionStages.`);
+            console.error("Starter ID not found for:", chosenStarter);
         }
     } else {
-        console.log("No starter found. Loading fallback Pokémon (Bulbasaur).");
-        getPokemonData(1); // Default to Bulbasaur (ID: 1)
+        console.error("No starter Pokémon found. Please check the PHP logic.");
     }
-};
+});
+
+document.getElementById("attackButton").addEventListener("click", function () {
+    attack(); // Call the attack function
+});
+
+document.getElementById("vangButton").addEventListener("click", function () {
+    catchPokemon(); // Call the catchPokemon function
+});

@@ -12,6 +12,34 @@ if ($conn->connect_error) {
 }
 
 $username = $_SESSION['username'];
+
+// Handle the POST request to save the starter Pokémon
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['starter'])) {
+    $starter = $_POST['starter'];
+
+    // Validate the starter value
+    $allowedStarters = ['Bulbasaur', 'Charmander', 'Squirtle', 'Chikorita', 'Cyndaquil', 'Totodile', 'Treecko', 'Torchic', 'Mudkip', 'Turtwig', 'Chimchar', 'Piplup', 'Snivy', 'Tepig', 'Oshawott', 'Chespin', 'Fennekin', 'Froakie', 'Rowlet', 'Litten', 'Popplio', 'Grookey', 'Scorbunny', 'Sobble', 'Sprigatito', 'Fuecoco', 'Quaxly']; // Add more starters as needed
+    if (!in_array($starter, $allowedStarters)) {
+        die("Invalid starter Pokémon selected.");
+    }
+
+    // Update the starter Pokémon in the database
+    $sql = "UPDATE users SET starter = ? WHERE username = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("ss", $starter, $username);
+
+    if ($stmt->execute()) {
+        // Redirect to game.php after saving the starter
+        header("Location: game.php");
+        exit();
+    } else {
+        echo "Error saving starter Pokémon: " . $stmt->error;
+    }
+
+    $stmt->close();
+}
+
+// Check if the user already has a starter
 $sql = "SELECT starter FROM users WHERE username = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $username);
@@ -218,15 +246,34 @@ $conn->close();
     });
 
     function chooseStarter(pokemon) {
-        // Save the chosen starter in localStorage
-        localStorage.setItem("chosenStarter", pokemon);
+        // Create a form dynamically
+        const form = document.createElement("form");
+        form.method = "POST";
+        form.action = "index.php";
 
-        // Debugging: Log the chosen starter
-        console.log(`Chosen starter saved to localStorage: ${pokemon}`);
+        // Add the starter as a hidden input
+        const input = document.createElement("input");
+        input.type = "hidden";
+        input.name = "starter";
+        input.value = pokemon;
+        form.appendChild(input);
 
-        // Redirect to game.php
-        window.location.href = "game.php";
-    }
+        // Append the form to the body and submit it
+        document.body.appendChild(form);
+        form.submit();
+           // Save the chosen starter in localStorage
+           localStorage.setItem("chosenStarter", pokemon);
+           // Debugging: Log the chosen starter
+           console.log(`Chosen starter saved to localStorage: ${pokemon}`);
+
+          
+           
+        }
+
+    <?php
+    echo "Starter: " . htmlspecialchars($starter);
+    ?>
+    
 </script>
 </body>
 </html>

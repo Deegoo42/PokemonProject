@@ -26,39 +26,13 @@ if ($row = $result->fetch_assoc()) {
 $stmt->close();
 $conn->close();
 
-// If no starter is found, set a default starter (e.g., Bulbasaur)
+// If no starter is found, redirect to index.php to choose one
 if (empty($starter)) {
-    $starter = "Bulbasaur";
+    header("Location: index.php");
+    exit();
 }
 
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['pokemon_name'])) {
-    if (!isset($_SESSION['username'])) {
-        echo "You must be logged in to catch Pokémon.";
-        exit();
-    }
-
-    $username = $_SESSION['username'];
-    $pokemonName = $_POST['pokemon_name'];
-
-    // Database connection
-    $conn = new mysqli("localhost", "root", "", "pokemon_project");
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Insert caught Pokémon into the database
-    $sql = "INSERT INTO caught_pokemon (username, pokemon_name) VALUES (?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("ss", $username, $pokemonName);
-    if ($stmt->execute()) {
-        echo "Pokémon caught successfully!";
-    } else {
-        echo "Error: " . $stmt->error;
-    }
-
-    $stmt->close();
-    $conn->close();
-}
+// Debugging: Log the starter Pokémon
 echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_QUOTES, 'UTF-8') . "');</script>";
 ?>
 
@@ -148,10 +122,11 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         <form action="logout.php" method="POST" style="margin-top: 10px;">
             <button type="submit">Logout</button>
         </form>
-        <button onclick="window.location.href='pokedex.php'" style="margin-top: 10px;">Go to Pokedex</button>
     </div>
 
-    <h1>Vang de pokemon!</h1>
+    <div id="title">
+        <img src="images/Titel.png" alt="Vang De Pokemon" style="width: 300px; height: auto;">
+    </div>
 
     <img src="https://pbs.twimg.com/media/FosWlLqXsAAYkIt.jpg:large" id="background" alt="achtergrond">
 
@@ -177,13 +152,17 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         <p id="hpText"></p>
     </div>
 
-    <!-- Game Controls -->
-    <div id="gameControls">
-        <button onclick="attack()">Attack</button>
-        <button onclick="catchPokemon()">Vang Pokémon</button>
+   
+
+    <div id="actions">
+        <!-- Attack Button -->
+        <img src="images/FIGHT.png" alt="Attack" id="attackButton" style="cursor: pointer; width: 150px; height: auto;">
+
+        <!-- Vang Pokemon Button -->
+        <img src="images/BALL.png" alt="Vang Pokemon" id="vangButton" style="cursor: pointer; width: 150px; height: auto;">
     </div>
 
-    <!-- Gevangen Pokémon -->
+    <!-- Gevangen Pokémon 
     <h2>Gevangen Pokémon</h2>
     <ul id="caughtPokemons">
         <?php
@@ -206,18 +185,23 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         $stmt->close();
         $conn->close();
         ?>
-    </ul>
+    </ul>-->
 
-    <form method="POST" action="game.php">
-        <input type="text" name="pokemon_name" placeholder="Enter Pokémon name" required>
-        <button type="submit">Catch Pokémon</button>
-    </form>
+    
+    <a href="pokedex.php">
+    <img src="images/POKEMON.png" alt="Go to Pokedex" style="cursor: pointer; width: 150px; height: auto; margin-top: 10px;">
+</a>
+
+    
 
     <script src="js\java.js"></script>
     <script>
+    
+
     let currentEnemyPokemon = null;
     let playerPokemonHp = 100; // Player's Pokémon HP
     let enemyPokemonHp = 100; // Enemy Pokémon HP
+    let caughtPokemons = []; // Store caught Pokémon
 
     document.addEventListener("DOMContentLoaded", function () {
         let chosenStarter = "<?php echo htmlspecialchars($starter); ?>";
@@ -231,6 +215,36 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         // Spawn a new enemy Pokémon
         spawnEnemyPokemon();
         updateHpBars();
+
+        fetch('get_caught_pokemon.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    caughtPokemons = data.caughtPokemons;
+                    console.log("Caught Pokémon:", caughtPokemons);
+                } else {
+                    console.error("Error fetching caught Pokémon:", data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    });
+
+    document.addEventListener("DOMContentLoaded", function () {
+        fetch('get_caught_pokemon.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    caughtPokemons = data.caughtPokemons; // Store Pokémon IDs
+                    console.log("Caught Pokémon IDs:", caughtPokemons);
+                } else {
+                    console.error("Error fetching caught Pokémon:", data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
     });
 
     function getPokemonId(name) {
@@ -262,7 +276,16 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
             "Fuecoco": 909,
             "Quaxly": 912
         };
-        return pokemonIds[name] || 1; // Default to Bulbasaur if the name is not found
+
+        // Normalize the name (capitalize the first letter, lowercase the rest)
+        const normalizedName = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+
+        if (pokemonIds[normalizedName]) {
+            return pokemonIds[normalizedName];
+        } else {
+            console.error(`Pokémon "${name}" not found in pokemonIds.`);
+            return null; // Return null if the Pokémon name is not found
+        }
     }
 
     function spawnEnemyPokemon() {
@@ -271,12 +294,16 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         fetch(`https://pokeapi.co/api/v2/pokemon/${randomId}`)
             .then(response => response.json())
             .then(data => {
-                currentEnemyPokemon = data.name.charAt(0).toUpperCase() + data.name.slice(1); // Capitalize the name
+                currentEnemyPokemon = {
+                    name: data.name.charAt(0).toUpperCase() + data.name.slice(1), // Capitalize the name
+                    id: randomId // Store the Pokémon ID
+                };
+                console.log("Spawned Enemy Pokémon:", currentEnemyPokemon); // Debugging
                 const enemyImage = data.sprites.front_default;
 
                 // Update the enemy Pokémon container
                 document.getElementById("enemyImage").src = enemyImage;
-                document.getElementById("enemyName").textContent = currentEnemyPokemon;
+                document.getElementById("enemyName").textContent = currentEnemyPokemon.name;
                 document.getElementById("enemyContainer").style.display = 'block';
 
                 // Reset enemy HP
@@ -317,9 +344,40 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
             alert("You defeated the enemy Pokémon!");
             spawnEnemyPokemon(); // Spawn a new enemy Pokémon
         } else if (playerPokemonHp === 0) {
-            alert("Your Pokémon fainted! Respawning...");
-            playerPokemonHp = 100; // Reset player's Pokémon HP
-            updateHpBars();
+            console.log("Caught Pokémon before switching:", caughtPokemons); // Debugging
+
+            if (caughtPokemons.length > 0) {
+                // Switch to a new Pokémon
+                const newPokemonId = caughtPokemons.shift(); // Take the first Pokémon ID from the list
+                alert(`Your Pokémon fainted! Switching to Pokémon ID: ${newPokemonId}.`);
+
+                if (newPokemonId) {
+                    // Fetch Pokémon details from the PokéAPI
+                    fetch(`https://pokeapi.co/api/v2/pokemon/${newPokemonId}`)
+                        .then(response => response.json())
+                        .then(data => {
+                            const pokemonName = data.name.charAt(0).toUpperCase() + data.name.slice(1); // Capitalize the name
+                            const pokemonImage = data.sprites.front_default;
+
+                            // Update player's Pokémon details
+                            document.getElementById("pokemonImage").src = pokemonImage;
+                            document.getElementById("pokemonName").textContent = pokemonName; // Display the Pokémon name
+                            playerPokemonHp = 100; // Reset HP for the new Pokémon
+                            updateHpBars();
+                        })
+                        .catch(error => {
+                            console.error("Error fetching Pokémon details:", error);
+                            alert("Failed to switch Pokémon. Please try again.");
+                        });
+                } else {
+                    alert(`Failed to switch to Pokémon ID: ${newPokemonId}.`);
+                }
+            } else {
+                // No caught Pokémon available
+                alert("Your Pokémon fainted, and you have no more Pokémon to fight!");
+                playerPokemonHp = 100; // Reset HP for the current Pokémon
+                updateHpBars();
+            }
         }
     }
 
@@ -329,24 +387,32 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
             return;
         }
 
+        console.log("Current Enemy Pokémon:", currentEnemyPokemon); // Debugging
+
         // Calculate the catch chance
         const catchChance = Math.max(10, 100 - enemyPokemonHp); // Minimum 10%, maximum 100%
         const randomChance = Math.random() * 100;
 
         if (randomChance <= catchChance) {
             // Successful catch
+            const pokemonId = currentEnemyPokemon.id; // Use the stored Pokémon ID
+            const pokemonName = currentEnemyPokemon.name; // Use the stored Pokémon name
+            console.log("Attempting to catch Pokémon:", pokemonName, "with ID:", pokemonId);
+
             fetch('catch_pokemon.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ pokemon_name: currentEnemyPokemon }),
+                body: JSON.stringify({ pokemon_name: pokemonName, pokemon_id: pokemonId }),
             })
             .then(response => response.json())
             .then(data => {
                 if (data.success) {
-                    alert("You successfully caught " + currentEnemyPokemon + "!");
-                    window.location.href = "pokedex.php"; // Redirect to Pokedex page
+                    alert("You successfully caught " + pokemonName + "!");
+                    caughtPokemons.push(pokemonId); // Add the Pokémon ID to the caughtPokemons array
+                    console.log("Caught Pokémon IDs:", caughtPokemons);
+                    spawnEnemyPokemon(); // Spawn a new enemy Pokémon
                 } else {
                     alert("Error saving Pokémon: " + data.message);
                 }
@@ -359,6 +425,7 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
             alert("The Pokémon escaped!");
         }
     }
+    
 
     let starter = localStorage.getItem("chosenStarter");
 
@@ -369,10 +436,12 @@ echo "<script>console.log('Starter from PHP: " . htmlspecialchars($starter, ENT_
         } else {
             console.error(`Starter "${starter}" not found in evolutionStages.`);
         }
-    } else {
-        console.log("No starter found. Loading fallback Pokémon (Bulbasaur).");
-        getPokemonData(1); // Default to Bulbasaur (ID: 1)
     }
     </script>
+    <script>
+    const chosenStarter = "<?php echo htmlspecialchars($starter, ENT_QUOTES, 'UTF-8'); ?>";
+    console.log("Starter from PHP:", chosenStarter);
+</script>
+<script src="js/java.js"></script>
 </body>
 </html>
