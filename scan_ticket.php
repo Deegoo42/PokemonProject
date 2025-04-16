@@ -6,7 +6,7 @@ session_start();
 $host = 'localhost';
 $dbname = 'spik_span';
 $username = 'localhost';
-$password = 'Spookster:11';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
