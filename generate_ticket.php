@@ -12,7 +12,7 @@ use Endroid\QrCode\Writer\PngWriter;
 $host = 'localhost:8001';
 $dbname = 'spik_span';
 $username = 'root';
-$password = 'Spookster:11';
+$password = '';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
