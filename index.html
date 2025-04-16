@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spik en Span</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Spik en Span</div>
+            <ul>
+                <button onclick="showhide(['thuis','about','tickets','contact'], [ 'privacy', 'ticketverkoop'])"><a>Thuis</a></button>
+                <button onclick="showhide(['tickets'], ['thuis', 'privacy', 'contact', 'about', 'ticketverkoop'])"><a href="#tickets">Tickets</a></button>
+                <button onclick="showhide(['about'], ['thuis', 'privacy', 'contact', 'tickets', 'ticketverkoop'])"><a href="#about">About</a></button>
+                <button onclick="showhide(['privacy'], ['thuis', 'about', 'contact', 'tickets', 'ticketverkoop'])"><a>Privacy</a></button>
+                <button onclick="showhide(['contact'], ['thuis', 'about', 'privacy', 'tickets', 'ticketverkoop'])"><a href="#contact">Contact</a></button>
+                <button onclick="window.location.href='medewerkerslogin.php'"><a href="#employee-login">Medewerkers Login</a></button>
+                <button onclick="vertaal()"><a href="#vertaal"><img src="https://www.netherlands-tourism.com/wp-content/uploads/2013/10/Flag-of-Limburg.png" alt="Limburg" style="height: 24px;"></a></button>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="thuis">
+            <h2 class="thuis">Welkom bij Spik en Span</h2>
+            <p class="thuis">Koop je tickets hier!!</p>
+        </section>
+
+        <section id="about">
+            <h2 class="about">Over ons</h2>
+            <p class="about">Gegarandeerd feest met Spik en Span op je evenement!</p>
+            <p class="about">Jo Huijnen en Niek Dirkx, oftewel Spik en Span, zijn de Kampioene van de Nach. Met hun vier LVK-overwinningen zijn zij het meest succesvolle vastelaoves-duo van het afgelopen decennium in Limburg.</p>
+            <p class="about">Spik en Span is als vastelaoves-duo actief sinds 2010 en vanaf het prille begin vaste finalist van het Limburgs Vastelaoves Leedjes Konkoer.</p>
+            <p class="about">Hun optredens zijn vol energie , met nummers die bekend zijn van Noord tot Zuid in de provincie. Een optreden van Spik en Span staat garant voor entertainment, samen zingen en samen beleven. “Gewuen jonges”, met prachtig repertoire en vlammende optredens.</p>
+            <p class="about">In 2020 won het duo wederom het LVK met het nummer ‘Vrunj tot de allerbeste runj’.</p>
+        </section>
+
+        <section class="hidden" id="privacy">
+            <h2 class="big pv privacy">Privacyverklaring Spik en Span</h2>
+            <h1 class="blauwding pv privacy">Wie zijn wij?</h1>
+            <p class="pv privacy">Privacyverklaring Spik en Span</p>
+            <p class="privacy pv privacy">Deze website dient als een systeem voor onze klanten om tickets te kopen voor de concerten die wij geven.</p>
+            <br>
+            <h1 class="blauwding pv privacy">Wie zijn wij?</h1>
+            <p class="pv privacy">Wij verzamelen alleen de persoonlijke gegevens die wij nodig hebben om onze dienst goed uit te voeren. Dit kan onder anderen gaan om:</p>
+            <p class="pv privacy">• naam- en achternaam<br>• e-mailadres<br>• Telefoonnummer<br>• Geboortedatum</p>
+            <br>
+            <h1 class="blauwding pv privacy">Waarvoor gebruiken wij jouw gegevens?</h1>
+            <p class=" pv privacy">Wij gebruiken jouw gegevens voor de bijstaande acties:</p>
+            <p class="pv privacy">• Verwerken en lever van bestelling<br>• Verzenden van orderbevestiging<br>• Het verbeteren van onze site</p>
+            <br>
+            <h1 class="blauwding pv privacy">Hoe beveiligen wij jouw gegevens?</h1>
+            <p class="pv privacy">Wij hebben een database die heel erg beveiligd is met allemaal sterke firewalls. Alleen admins/bevoegde medewerkers hebben toegang tot onze database/systeem</p>
+            <br>
+            <h1 class="blauwding pv privacy">Hoelang behouden wij deze gegevens?</h1>
+            <p class="pv privacy">Wij behouden uw gegevens tot na de show waar u ticket toe behoort. Hierna verwijderen we dit uit de database van gegevens. In geval van tickets die vaker dan één keer meegaan verwijderen we uw ticket uit de database 3 dagen nadat het ticket is uitgewerkt, dit om de klant de kans te geven om nog contact op te nemen in geval er is iets mis is met het ticket na het scannen.</p>
+            <br>
+            <h1 class="blauwding pv privacy">Rechten als klant van Spik en Span</h1>
+            <p class="pv privacy">Je hebt het recht om:</p>
+            <p class="pv privacy">• Jouw informatie te zien<br>• Jouw gegevens te laten verwijderen/verranderen<br>• Toestemming om klachten indienen</p>
+        </section>
+
+        <section id="tickets">
+            <h2 class="tickets">Koop je tickets!</h2>
+            <div class="ticket-container">
+                <div class="ticket-card">
+                    <img src="https://i.ytimg.com/vi/qGGkel-EhiQ/maxresdefault.jpg" alt="Spik en Span concert" class="ticket-img">
+                    <h3 class="tickets ticket-title">Spik en Span Live in Venlo</h3>
+                    <p class="tickets ticket-desc">Een onvergetelijke vastelaovesavond met Spik en Span – energie, humor en muziek!</p>
+                    <p class="tickets ticket-desc">kinder ticket 9 tm 15</p>
+                    <p class="tickets ticket-price">€ 9,50</p>
+                    <a class="tickets ticket-button" href="ticket_form.php" target="_self">Koop Ticket</a>
+                </div>
+
+                <div class="ticket-card">
+                    <img src="https://i.ytimg.com/vi/TiLlnFMdxUM/maxresdefault.jpg" alt="Spik en Span concert" class="ticket-img">
+                    <h3 class="tickets ticket-title">Spik en Span Live in Venlo</h3>
+                    <p class="tickets ticket-desc">Een onvergetelijke vastelaovesavond met Spik en Span – energie, humor en muziek!</p>
+                    <p class="tickets ticket-desc">volwassen ticket</p>
+                    <p class="tickets ticket-price">€ 17,50</p>
+                    <a class="tickets ticket-button" href="ticket_form.php" target="_self">Koop Ticket</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <h2 class="contact">Contact</h2>
+            <p class="contact">Neem contact met ons op via e-mail of telefoon.</p>
+            <p class="contact">
+                Email: <a href="mailto:spikenspan@gmail.com">spikenspan@gmail.com</a><br>
+                Tel: <a href="tel:+31612345678">+31 6 12345678</a>
+            </p>
+        </section>
+        
+
+        <section class="hidden" id="ticketverkoop1">
+            <div class="ticketverkoop-container">
+                <div class="ticketverkoop-back">
+                    <button id="knop" onclick="showhide(['tickets'], ['ticketverkoop'])">
+                        <img id="wegknop" src="https://th.bing.com/th/id/OIP.8BdoMHAflaQtcZIulhvQgwAAAA?rs=1&pid=ImgDetMain" alt="sluit" />
+                    </button>
+                    <img src="https://i.ytimg.com/vi/qGGkel-EhiQ/maxresdefault.jpg" alt="Spik en Span concert" class="ticket-img">
+                    <h3 class="textkaartje boven ticket-title1">Spik en Span Live in Venlo</h3>
+                    <p class="textkaartje boven ticket-desc1">Een onvergetelijke vastelaovesavond met Spik en Span – energie, humor en muziek!</p>
+                    <p class="textkaartje boven ticket-desc1">kinder ticket 9 tm 15</p>
+                    <p class="textkaartje boven ticket-price1">€ 9,50</p>
+                    <a class="textkaartje boven ticket-button1" onclick="showhide(['ticketverkoop'], ['about', 'privacy', 'contact', 'tickets', 'thuis'])" target="_blank">Koop Ticket</a>
+                </div>
+            </div>
+        </section>
+        
+        <section id="ticket-form" class="hidden">
+            <h2>Vul je gegevens in om je ticket te kopen</h2>
+            <form action="generate_ticket.php" method="POST">
+                <label for="naam">Naam:</label>
+                <input type="text" id="naam" name="naam" required>
+                
+                <label for="achternaam">Achternaam:</label>
+                <input type="text" id="achternaam" name="achternaam" required>
+                
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="geboortedatum">Geboortedatum:</label>
+                <input type="date" id="geboortedatum" name="geboortedatum" required>
+                
+                <input type="hidden" id="ticket-type" name="ticket_type" value="">
+                
+                <button type="submit">Bevestig en Koop Ticket</button>
+                <button type="button" onclick="hideForm()">Annuleer</button>
+            </form>
+        </section>
+
+        <div class="confetti-wrapper">
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            <div class="confetti"></div>
+            
+          </div>
+          
+
+</div>
+    </section>
+
+    </main>
+    <script src="java.js"></script>
+    <script>
+        function showForm(ticketType) {
+            // Toon het formulier
+            document.getElementById('ticket-form').classList.remove('hidden');
+            
+            // Stel het type ticket in
+            document.getElementById('ticket-type').value = ticketType;
+        }
+
+        function hideForm() {
+            // Verberg het formulier
+            document.getElementById('ticket-form').classList.add('hidden');
+        }
+    </script>
+</body>
+</html>
